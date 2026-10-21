@@ -152,6 +152,7 @@ section {
 }
 
 
+
 /* ==========================================================
    04. NAVIGATION
    ========================================================== */
@@ -161,11 +162,13 @@ nav {
     top: 0;
     z-index: 50;
 
-    color: var(--white);
-    background-color: rgba(5, 5, 5, 0.93);
+    width: 100%;
 
-    border-bottom: 1px solid #292929;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.14);
+    color: #ffffff;
+    background-color: #0a0a0a;
+
+    border-bottom: 1px solid #242424;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.14);
 }
 
 .nav {
@@ -178,36 +181,93 @@ nav {
     min-width: 0;
 }
 
-
+/* LOGOTYPE */
 
 .nav .logo {
     display: block;
     flex: 0 0 auto;
 
     width: 160px;
-    height: 72px;
+    height: 78px;
 
-    max-width: none;
-    max-height: none;
+    max-width: 100%;
 
-    object-fit: cover;
-    object-position: center center;
+    object-fit: contain;
+    object-position: left center;
 
     margin: 0;
     padding: 0;
 
-    background-color: transparent;
+    background: transparent;
 }
 
+/* NAVIGATION LINKS */
 
-
-.links {
+.nav .links {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 24px;
+
+    margin-left: auto;
 
     font-size: 14px;
 }
+
+/* WHITE TEXT */
+
+.nav .links a:not(.cta) {
+    display: inline-flex;
+    align-items: center;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+/* HOVER LINKS */
+
+.nav .links a:not(.cta):hover {
+    color: #edbc1c;
+}
+
+/* YELLOW CTA BUTTON */
+
+.nav .links .cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    color: #080808;
+    background-color: var(--yellow);
+
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.4;
+
+    text-align: center;
+    white-space: nowrap;
+
+    border-radius: 4px;
+}
+
+/* CTA HOVER */
+
+.nav .links .cta:hover {
+    color: #080808;
+    background-color: #f9d45f;
+
+    transform: translateY(-2px);
+}
+
+
 
 
 /* ==========================================================
@@ -659,23 +719,35 @@ nav {
     width: 170px;
 }
 
+
+
 .price-logo {
     display: block;
 
     width: 170px;
-    height: auto;
+    height: 110px;
 
-    margin: 0 auto;
+    margin: 0 auto 8px;
 
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
+
+    filter: invert(1);
+
+    background-color: transparent;
 }
 
+
+
+
 .big {
-    margin: 20px 0;
+    margin: 0 0 20px;
 
     font-size: 58px;
     font-weight: 900;
+    line-height: 1.1;
 }
+
 
 
 /* ==========================================================
